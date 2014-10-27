@@ -1,0 +1,145 @@
+.nav-menu {
+	padding-top:20px;
+	margin-top:30px;
+}
+
+/* Navigation */
+
+#navigation{
+	border-bottom:0px solid #e2e2e2;
+	height:auto;
+	position: relative;
+	background-color: #ffffff;
+	z-index: 900;
+	background-image: url('img/banda.png');  background-repeat: no-repeat; background-position: -100px 0px;
+}
+}
+
+.navigation {
+	
+}
+
+.sticky-wrapper {
+
+	background-color: #ffffff;
+}
+
+#slider {
+	z-index:1;
+	position:relative;
+}
+
+.logpng {width: 170px;}
+
+#pagetop {
+	background-color: #3c3c3c;
+	z-index: 999;
+}
+
+
+#about .about-content{
+		width:33%;
+		height:auto;
+		min-height:276px;
+		background:#fff;
+		float:left;
+		cursor:pointer;
+		-webkit-transition: all 0.3s;
+		-moz-transition: all 0.3s;
+		transition: all 0.3s;
+	}
+
+.page-desc{
+		margin:15px auto;
+		font-size:14px;
+		font-weight:300;
+		text-transform: none;
+		width:100%;
+		max-width:860px;
+		text-align:justify;
+		opacity:0.7;
+	}
+
+	.page-desc2 {
+		margin:15px auto;
+		font-size:14px;
+		font-weight:300;
+		text-transform: none;
+		width:100%;
+		max-width:860px;
+		text-align:justify;
+		opacity:1;
+	}
+
+#features{
+		background-color: #e5e5e4;
+		height:1020px;
+		margin-top:20px;
+		margin-bottom:0px;
+	}
+
+	.checkcolbianco {
+		color: white;
+	}
+
+	.checkcolred {
+		color: red;
+	}
+
+	.checkcolgreen {
+		color: green;
+	}
+
+	.service-text .item {
+		height: auto;
+}
+
+.slide-s {
+	width: 100%;
+	margin: 0 auto 0px;
+}
+
+
+.tabs {
+	width: 100%;
+	float: left;
+	}
+
+
+.imgtab {
+	width: auto;
+	height: 70%;
+}
+.titolotab {
+
+}
+
+.titolotab th {
+	background-color: #999999;
+	color:; #ffffff;
+}
+
+.img-responsive {
+	border-radius: 20px;
+}
+
+.table-striped td {
+	font-size: 13px;
+}
+
+.table-striped th {
+	font-size: 13px;
+}
+
+.stondami {
+	border-radius: 20px;
+}
+
+.thumbgallery {
+	height: 285px;
+	margin-bottom:20px;
+}
+.titolothumb {
+	position: relative;
+	margin-bottom:0px;
+}
