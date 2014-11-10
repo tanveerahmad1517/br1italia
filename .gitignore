@@ -1,5 +1,4 @@
 # first line must not contain any rules
 media/*
-static/img/*
-static/images/*
+static/*
 !.gitignore

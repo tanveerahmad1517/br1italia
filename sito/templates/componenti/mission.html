@@ -31,19 +31,16 @@
 				  <div class="carousel-inner service-text">
 				  
 					<!-- Service First Text -->
+
 					<div class="item active oblo">
 							<img src="{{STATIC_URL}}/img/dottori/01.JPG" class="img-responsive oblo" style="opacity: 1">
 					</div>
-					
+					{% for dottori in dottori_list %}
 					<!-- Service Second Text -->
-					<div class="item oblo">
-							<img src="{{STATIC_URL}}/img/dottori/02.JPG" class="img-responsive oblo" style="opacity: 1">
+					<div class="item oblo">{% load cropping %}
+							<img src="{% cropped_thumbnail dottori "slider" %}" class="img-responsive oblo" style="opacity: 1">
 					</div>
-					
-					<!-- Service Third Text -->
-					<div class="item oblo">
-							<img src="{{STATIC_URL}}/img/dottori/03.JPG" class="img-responsive oblo" style="opacity: 1">
-					</div>
+					{% endfor %}
 					
 				  </div>
 				  <!-- End Slides -->

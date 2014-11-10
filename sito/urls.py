@@ -1,3 +1,4 @@
+'''
 from django.conf.urls import patterns, include, url
 from django.conf import settings
 from sito import views
@@ -10,7 +11,7 @@ urlpatterns = patterns('sito.views',
 	url(r'^$', HomeView, name="home"),
 	#url(r'^admin/', include(admin.site.urls)),
 
-	'''
+	
 	url(r'^acqua/$', AcquaView, name="acqua"),
 	url(r'^legno/$', LegnoView, name="legno"),
 	url(r'^fuoco/$', FuocoView, name="fuoco"),
@@ -23,5 +24,7 @@ urlpatterns = patterns('sito.views',
 	url(r'^blog/$', BlogView, name="blog"),
 	url(r'^blog/(?P<post_id>\d+)/$', BlogDettaglioView, name="blogdettaglio"),
 	url(r'^ckeditor/', include('ckeditor.urls')),
-	'''
+	
 )
+
+'''

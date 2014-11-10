@@ -271,7 +271,7 @@ window.onload = function () {
 
 			'use strict';
 
-			var latlng = new google.maps.LatLng(18.411378,-66.102344);
+			var latlng = new google.maps.LatLng(45.5976699,9.8830166);
 
 			var styles = [ 
 
@@ -320,8 +320,10 @@ window.onload = function () {
 			 var contentString = '<div id="content">'+
 			  '<div id="siteNotice">'+
 			  '</div>'+
-			  '<h4>We Are Here</h4>'+
-			  '<p>Description' +
+			  '<h4>BR1italia</h4>'+
+			  '<p>Via Carvasaglio, 19' +
+			  '</p>'+
+			  '<p>25036 PALAZZOLO S/O (BS)'+
 			  '</p>'+
 			  '</div>';
 
@@ -331,14 +333,14 @@ window.onload = function () {
 			
 			var map = new google.maps.Map(document.getElementById('map'), myOptions);
 			
-			var myLatlng = new google.maps.LatLng(18.411378,-66.102344);
+			var myLatlng = new google.maps.LatLng(45.5976699,9.8830166);
 			
-			var image = 'images/marker.png';
+			/*var image = 'images/marker.png';*/
 			var marker = new google.maps.Marker({
 				  position: myLatlng,
 				  map: map,
-				  title: 'Hello World!',
-				  icon: image
+				  title: 'BR1ITALIA',
+				  //icon: image
 			  });
 			  
 			 google.maps.event.addListener(marker, 'click', function() {
