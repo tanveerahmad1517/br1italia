@@ -80,6 +80,16 @@ class LavoraForm(forms.Form):
     messaggio = forms.CharField(label='Messaggio', widget=forms.Textarea)
 
 
+class ContattaForm(forms.Form):
+    denominazione = forms.CharField(label='Nome', max_length=100)
+    email = forms.CharField(label='Cognome', max_length=100)
+    oggetto = forms.CharField(label='Telefono', max_length=100)
+    messaggio = forms.CharField(label='Fax', max_length=100)
+
+
+class ContactnewsForm(forms.Form):
+    email = forms.CharField(label='Cognome', max_length=100)
+
 
 class ContactForm(forms.Form):
     subject = forms.CharField(max_length=100)

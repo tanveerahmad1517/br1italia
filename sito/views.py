@@ -51,5 +51,55 @@ def contacta(request):
     })
 
 
+
+def contattaci(request):
+    if request.method == 'POST': # If the form has been submitted...
+        form = ContattaForm(request.POST) # A form bound to the POST data
+        if form.is_valid(): # All validation rules pass
+            subject = 'Messaggio da Sito Internet www.br1italia.it'
+            #message = form.cleaned_data['messaggio']
+            message = render_to_string('contatta.txt', {'post': request.POST})
+            sender = form.cleaned_data['email']
+            cc_myself = False
+
+            recipients = ['pierangelo1982@gmail.com']
+            if cc_myself:
+                recipients.append(sender)
+        
+            send_mail(subject, message, sender, recipients)
+            return HttpResponseRedirect('/thanks/') # Redirect after POST
+    else:
+        form = ContattaForm() # An unbound form
+
+    return render_to_response('contact.html', {
+        'form': form,
+    })
+
+
+def contactnews(request):
+    if request.method == 'POST': # If the form has been submitted...
+        form = ContactnewsForm(request.POST) # A form bound to the POST data
+        if form.is_valid(): # All validation rules pass
+            subject = 'Messaggio da Sito Internet www.br1italia.it'
+            #message = form.cleaned_data['messaggio']
+            message = render_to_string('contactnews.txt', {'post': request.POST})
+            sender = form.cleaned_data['email']
+            cc_myself = False
+
+            recipients = ['pierangelo1982@gmail.com']
+            if cc_myself:
+                recipients.append(sender)
+        
+            send_mail(subject, message, sender, recipients)
+            return HttpResponseRedirect('/thanks/') # Redirect after POST
+    else:
+        form = ContactnewsForm() # An unbound form
+
+    return render_to_response('contact.html', {
+        'form': form,
+    })
+
+
+
 def Grazie(request):
    return render_to_response('grazie.html', context_instance=RequestContext(request))

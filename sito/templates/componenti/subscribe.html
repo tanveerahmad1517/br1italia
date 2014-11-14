@@ -25,9 +25,9 @@
 					
 					<!--Subscribe Right -->
 					<div class="col-xs-5 subs right">
-						<form id="subscribe-mail" method="post" action="/contact">
+						<form action="/iscriviti/" method="post">{% csrf_token %}
 						<!--Subscribe input -->
-						 <input type="email" class="subscribe-mail"  required="required" id="e-mail" placeholder="la tua email" />
+						 <input type="email" name="email" class="subscribe-mail"  required="required" id="e-mail" placeholder="la tua email" />
 						 <!--Subscribe Button -->
 						 <button type="submit" class="subscribe-btn subs">Iscriviti</button>
 						 </form>

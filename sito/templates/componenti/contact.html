@@ -5,18 +5,18 @@
 				<!--Contact Form -->
 				<div class="contact-form">
 					
-					<form id="contact-us" method="post" action="/contact">
+					<form action="/contattaci/" method="post">{% csrf_token %}
 				
 						<!--Contact Header -->
 						<h1 class="contact-us">Contattaci</h1>
 						<!-- Name Input -->
-						<input type="text" name="name" id="name" required="required" class="form" placeholder="Denominazione" />
+						<input type="text" name="denominazione" id="name" class="form" placeholder="Denominazione" />
 						<!-- Email Input -->
-						<input type="email" name="email" id="email" required="required" class="form" placeholder="Email" />
+						<input type="email" name="email" id="email" class="form" placeholder="Email" />
 						<!-- Subject Input -->
-						<input type="text" name="subject" id="subject" class="form" placeholder="Oggetto" />
+						<input type="text" name="oggetto" id="subject" class="form" placeholder="Oggetto" />
 						<!-- Message Area -->
-						<textarea name="message" id="message" class="form textarea"  placeholder="Messaggio"></textarea>
+						<textarea name="messaggio" id="message" class="form textarea"  placeholder="Messaggio"></textarea>
 						<!-- Send Button -->
 						<button type="submit" id="submit" name="Invia" class="form-btn"><i class="fa fa-envelope"></i></button> 
 						
