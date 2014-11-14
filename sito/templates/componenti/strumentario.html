@@ -11,7 +11,7 @@
 													<hr>										
 											</div>
 												{% for immagini in immagini_list %}
-												<div class="col-xs-12 col-sm-6 col-md-3 thumbgallery" style="margin-bottom: 30px;">
+												<div class="col-xs-6 col-sm-4 col-md-3 thumbgallery" style="margin-bottom: 30px;">
 													{% load cropping %}
 													<a href="{{MEDIA_URL}}/{{immagini.image}}" data-lightbox="roadtrip">
 													<img src="{% cropped_thumbnail immagini "thumb" %}" class="img-responsive stondami">

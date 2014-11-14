@@ -6,6 +6,8 @@ from django.contrib import admin
 urlpatterns = patterns('',
     # Examples:
     url(r'^$', 'sito.views.HomeView', name='home'),
+    url(r'^contact/$', 'sito.views.ContactView', name="contact"),
+
 
     #url(r'^', include(sito.urls)),
     url(r'^admin/', include(admin.site.urls)),

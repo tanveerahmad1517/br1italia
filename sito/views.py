@@ -18,3 +18,6 @@ def HomeView(request):
 				}
    #return render_to_response('home.html', context_instance=RequestContext(request))
 	return render(request, 'home.html', context)
+
+def ContactView(request):
+   return render_to_response('contact.html', context_instance=RequestContext(request))

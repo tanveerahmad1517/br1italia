@@ -78,7 +78,7 @@
 
 #features{
 		background-color: #e5e5e4;
-		height:1020px;
+		height:auto;
 		margin-top:20px;
 		margin-bottom:0px;
 	}
@@ -152,19 +152,50 @@
 	padding-top:0px;
 }
 
-/* ------------ 930px ------------------- */
+#video2 {
+	display: none;
+}
 
-@media (max-width: 930px) {
+
+
+
+
+/* ------------ 1024px ------------------- */
+
+@media (max-width: 1024px) {
+
+	#video {
+		display: none
+	}
+
+	#video2 {
+		display: block;
+	}
+
+	.envelopetop {
+		text-align: center;
+		padding-left: auto;
+		padding-right: auto;
+		position: relative;
+
+	}
 
 	.logpng {
+		margin-left:30px;
 	}
+
+	.nav-menu {
+		display: none;
+		}
 
 
 	.mobile-drop {
+		display: block;
 		height: 100%;
 		width: 100%;
 		margin: 30px;
 		padding:20px;
+		padding-right: 50px;
 	}
 
 	.navigation {
@@ -177,5 +208,36 @@
 		position: relative;
 	}
 
+}
 
+
+
+
+/* +++++++++++++++++++++ 768px +++++++++++++++++++++++++ */
+
+@media (max-width: 768px) {
+
+	.page-desc {
+		padding-left:20px;
+		padding-right:20px;
+	}
+
+	#video {
+		display: none
+	}
+
+	#video2 {
+		display: block;
+	}
+
+	.logomission {
+		margin-bottom: 30px;
+		margin-left: auto;
+		margin-right: auto;
+		position: relative;
+	}
+
+	.marginemission {
+		height: 15px;
+	}
 }
