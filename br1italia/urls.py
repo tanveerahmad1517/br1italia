@@ -8,6 +8,8 @@ urlpatterns = patterns('',
     url(r'^$', 'sito.views.HomeView', name='home'),
     #url(r'^contact/$', 'sito.views.ContactView', name="contact"),
     url(r'^contact/$', 'sito.views.contacta', name="contact"),
+    url(r'^thanks/$', 'sito.views.Grazie', name="grazie"),
+
 
 
     #url(r'^', include(sito.urls)),

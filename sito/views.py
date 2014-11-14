@@ -31,7 +31,7 @@ def contacta(request):
     if request.method == 'POST': # If the form has been submitted...
         form = LavoraForm(request.POST) # A form bound to the POST data
         if form.is_valid(): # All validation rules pass
-            subject = 'sito internet'
+            subject = 'Messaggio da Sito Internet www.br1italia.it'
             #message = form.cleaned_data['messaggio']
             message = render_to_string('contact.txt', {'post': request.POST})
             sender = form.cleaned_data['email']
@@ -49,3 +49,7 @@ def contacta(request):
     return render_to_response('contact.html', {
         'form': form,
     })
+
+
+def Grazie(request):
+   return render_to_response('grazie.html', context_instance=RequestContext(request))
