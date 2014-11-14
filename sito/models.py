@@ -1,3 +1,4 @@
+
 from django.db import models
 from image_cropping import ImageRatioField, ImageCropField
 
@@ -63,3 +64,25 @@ class Immagini(models.Model):
         verbose_name_plural = "Galleria Immagini"
         ordering = ['id']
 
+
+#### +++++ CONTATTI +++++ #####
+
+from django import forms
+
+class LavoraForm(forms.Form):
+    nome = forms.CharField(label='Nome', max_length=100)
+    cognome = forms.CharField(label='Cognome', max_length=100)
+    telefono = forms.CharField(label='Telefono', max_length=100)
+    fax = forms.CharField(label='Fax', max_length=100)
+    email = forms.CharField(label='email', max_length=100)
+    citta = forms.CharField(label='Citta', max_length=100)
+    indirizzo = forms.CharField(label='Indirizzo', max_length=100)
+    messaggio = forms.CharField(label='Messaggio', widget=forms.Textarea)
+
+
+
+class ContactForm(forms.Form):
+    subject = forms.CharField(max_length=100)
+    message = forms.CharField(widget=forms.Textarea)
+    sender = forms.EmailField()
+    cc_myself = forms.BooleanField(required=False)

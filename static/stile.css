@@ -241,3 +241,14 @@
 		height: 15px;
 	}
 }
+
+
+
+
+@media (max-width: 420px) {
+	
+	.marginemission {
+		height: 50px;
+	}
+
+}

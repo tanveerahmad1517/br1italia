@@ -6,6 +6,10 @@ from django.views.generic import ListView, DetailView
 from sito.models import *
 from django.http import HttpResponseRedirect
 from django.core.urlresolvers import reverse
+from django.template.loader import render_to_string
+from django.conf import settings
+from django.core.mail import send_mail
+
 
 # Create your views here.
 def HomeView(request):
@@ -21,3 +25,27 @@ def HomeView(request):
 
 def ContactView(request):
    return render_to_response('contact.html', context_instance=RequestContext(request))
+
+
+def contacta(request):
+    if request.method == 'POST': # If the form has been submitted...
+        form = LavoraForm(request.POST) # A form bound to the POST data
+        if form.is_valid(): # All validation rules pass
+            subject = 'sito internet'
+            #message = form.cleaned_data['messaggio']
+            message = render_to_string('contact.txt', {'post': request.POST})
+            sender = form.cleaned_data['email']
+            cc_myself = False
+
+            recipients = ['pierangelo1982@gmail.com']
+            if cc_myself:
+                recipients.append(sender)
+        
+            send_mail(subject, message, sender, recipients)
+            return HttpResponseRedirect('/thanks/') # Redirect after POST
+    else:
+        form = LavoraForm() # An unbound form
+
+    return render_to_response('contact.html', {
+        'form': form,
+    })

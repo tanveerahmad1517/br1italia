@@ -13,6 +13,32 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 
+
+
+ADMINS = (
+    ('Orizio Pierangelo', 'pierangelo1982@gmail.com'),
+    
+)
+
+MANAGERS = (
+    ('Orizio Pierangelo', 'pierangelo1982@gmail.com'),
+)
+
+
+
+#EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+#EMAIL_BACKEND = 'django.core.mail.backends.dummy.EmailBackend'
+#EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'pierangelo1982@gmail.com'
+EMAIL_HOST_PASSWORD = '99kilpin'
+DEFAULT_FROM_EMAIL = 'pierangelo1982@gmail.com'
+CONTACT_RECIPIENTS = False
+
+
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.7/howto/deployment/checklist/
 
