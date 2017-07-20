@@ -16,28 +16,24 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 
 ADMINS = (
-    ('Orizio Pierangelo', 'pierangelo1982@gmail.com'),
-    
+    ('Name surname', 'your@email.com'),
+
 )
 
 MANAGERS = (
-    ('Orizio Pierangelo', 'pierangelo1982@gmail.com'),
+    ('Name surname', 'pierangelo1982@gmail.com'),
 )
 
 
 
-#EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-#EMAIL_BACKEND = 'django.core.mail.backends.dummy.EmailBackend'
-#EMAIL_USE_TLS = True
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
-EMAIL_HOST_USER = 'pierangelo1982@gmail.com'
-EMAIL_HOST_PASSWORD = '99kilpin'
-DEFAULT_FROM_EMAIL = 'pierangelo1982@gmail.com'
+EMAIL_HOST_USER = 'xxxxx'
+EMAIL_HOST_PASSWORD = 'xxxxxx'
+DEFAULT_FROM_EMAIL = 'xxxxxxx'
 CONTACT_RECIPIENTS = False
-
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.7/howto/deployment/checklist/
@@ -48,9 +44,10 @@ SECRET_KEY = 'vwa)hhh%85ml(b_!0d_!1&ys60y4+9%9a-s7^fx-^&r74to((4'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-TEMPLATE_DEBUG = True
+TEMPLATE_DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['www.br1italia.it',
+		'test.br1italia.it']
 
 
 # Application definition
@@ -88,11 +85,11 @@ WSGI_APPLICATION = 'br1italia.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'br1italia',
-        'USER': 'root',
-        'PASSWORD': 'alnitek',
-        'HOST': 'localhost',
-        'PORT': '5432',
+        'NAME': 'xxxxxxxx',
+        'USER': 'xxxxxx',
+        'PASSWORD': 'xxxxx',
+        'HOST': 'db',
+        'PORT': '3306',
     }
 }
 
@@ -114,23 +111,23 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, "static"),
-    #'/home/pierangelo/Scrivania/sagitairbox/sagitair/static/',
+    #os.path.join(BASE_DIR, "static"),
+    '/code/static/',
 )
 
 #STATICFILES_DIRS = ()
 
-STATIC_ROOT = '/home/pierangelo/Scrivania/br1italiabox/br1italia'
+STATIC_ROOT = '/code/'
 
 STATIC_URL = '/static/'
 
-MEDIA_ROOT = '/home/pierangelo/Scrivania/br1italiabox/br1italia/media/'
+MEDIA_ROOT = '/code/media/'
 
+#MEDIA_URL = "http://www.br1italia.it/media/"
 MEDIA_URL = "http://127.0.0.1:8000/media/"
-
+#MYDIR = "http://www.br1italia.it"
 MYDIR = "http://127.0.0.1:8000"
-
-#TEMPLATE_DIRS = "/home/pierangelo/Scrivania/sagitairbox/sagitair/sito/templates/"
+#TEMPLATE_DIRS = "/var/www/vhosts/vps93689.ovh.net/br1italia.it/br1italiabox/br1italia/sito/templates"
 
 
 
@@ -141,5 +138,5 @@ THUMBNAIL_PROCESSORS = (
 
 ###
 IMAGE_CROPPING_THUMB_SIZE = (1425, 500)
-#cropping = ImageRatioField('image', '1425x500', size_warning=True)
+
 IMAGE_CROPPING_SIZE_WARNING = True
